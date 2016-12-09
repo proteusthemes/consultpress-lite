@@ -1,0 +1,94 @@
+/*------------------------------------*\
+    Local variables
+\*------------------------------------*/
+
+// Colors
+//
+// Grayscale and brand colors for use across Bootstrap.
+
+$gray-dark: #273a42;
+$gray: #777777;
+$gray-lighter: #e6e6e6;
+
+$brand-primary: #0bcda5;
+$brand-secondary: #e13c5f;
+
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+
+$enable-rounded: false;
+
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-color: $gray;
+
+
+// Links
+//
+// Style anchor elements.
+
+$link-color: $brand-primary;
+
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// Rem px ratio Function
+@function ptr($px) {
+	@return ($px / $rem-px-ratio) + rem;
+}
+
+$font-family-sans-serif: 'Roboto', Helvetica, Arial, sans-serif;
+$font-family-serif: 'Merriweather', Georgia, "Times New Roman", Times, serif;
+$primary-font: $font-family-sans-serif;
+$secondary-font: $font-family-serif;
+
+$font-size-root: 18px;
+$rem-px-ratio: 18;
+
+$font-size-h1: ptr(36);
+$font-size-h2: ptr(30);
+$font-size-h3: ptr(24);
+$font-size-h4: ptr(20);
+$font-size-h5: ptr(18);
+$font-size-h6: ptr(16);
+
+$line-height-base: 1.6;
+
+$headings-font-family: $secondary-font;
+$headings-font-weight: 900;
+$headings-line-height: 1.2;
+$headings-color: $gray-dark;
+
+
+// Components
+//
+// Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
+
+$border-radius: ptr(2);
+
+
+// Buttons
+//
+// For each of Bootstrap's buttons, define text, background and border color.
+
+$btn-padding-x: ptr(30);
+$btn-padding-y: ptr(19);
+$btn-font-weight: bold;
+
+
+// ProteusThemes variables
+//
+// Custom variables which are not part of the Bootstrap.
+
+// Transitions
+$primary-transition: all 100ms ease-out;
+
+// Font Awesome path
+$fa-font-path: 'bower_components/font-awesome/fonts';

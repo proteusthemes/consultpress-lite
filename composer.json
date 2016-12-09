@@ -1,0 +1,10 @@
+{
+    "name":         "proteusthemes/consultinglite-pt",
+    "description":  "WordPress theme by ProteusThemes.",
+    "license":      "GPL-2.0+",
+    "type":         "project",
+    "require": {
+        "proteusthemes/wai-aria-walker-nav-menu": "^1.2.0",
+        "proteusthemes/wp-customizer-utilities":  "^2.3.0"
+    }
+}

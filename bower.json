@@ -1,0 +1,23 @@
+{
+  "name": "consultinglite-wp",
+  "authors": [
+    "ProtesuThemes"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "v4.0.0-alpha.5",
+    "picturefill": "^3.0.0",
+    "font-awesome": "~4.5.0"
+  },
+  "devDependencies": {
+    "almond": "~0.3.0",
+    "requirejs": "~2.1.11"
+  }
+}

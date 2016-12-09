@@ -1,0 +1,13 @@
+/* 05.08. Error 404 */
+.error-404 {
+	// scss-lint:disable SelectorFormat
+	.widget_search {
+		margin-top: ptr(30);
+
+		.search-form {
+			@include media-breakpoint-up(lg) {
+				width: ptr(260);
+			}
+		}
+	}
+}

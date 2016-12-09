@@ -1,0 +1,122 @@
+/* Header */
+.header {
+	// Header container.
+	&__container {
+		background-color: #e7ecee;
+		margin-bottom: ptr(90);
+
+		@include media-breakpoint-up(lg) {
+			background: #1f2e34 url('assets/images/pattern.jpg');
+		}
+
+		// Container on Page Header is working only for screens bigger than 992px.
+		> .container {
+			@include media-breakpoint-down(md) {
+				max-width: 100%;
+				width: auto;
+				padding-left: 0;
+				padding-right: 0;
+				margin-left: 0;
+				margin-right: 0;
+			}
+		}
+	}
+
+	// Container on Page Header is working only for screens smaller than 992px.
+	> .container {
+		@include media-breakpoint-up(lg) {
+			max-width: 100%;
+			padding-left: 0;
+			padding-right: 0;
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+
+	// Logo container.
+	&__logo {
+		text-align: center;
+		background-color: #ffffff;
+		display: inline-block;
+		border-bottom-left-radius: $border-radius;
+		border-bottom-right-radius: $border-radius;
+		width: 100%;
+		height: ptr(120);
+		box-shadow: 0 1px 4px rgba(0, 0, 0, .1);
+		margin-bottom: ptr(20);
+
+		@include media-breakpoint-up(lg) {
+			text-align: left;
+			max-width: calc(75% - #{ptr(38)});
+			width: auto;
+			margin-bottom: 0;
+		}
+
+		&--text {
+			height: auto;
+		}
+
+		&:focus,
+		&:hover {
+			text-decoration: none;
+
+			.header__logo-text {
+				color: $brand-primary;
+			}
+		}
+
+		// Logo with text.
+		&-text {
+			font-size: ptr(40);
+			color: $gray-dark;
+			padding: ptr(36) ptr(40);
+			margin-bottom: 0;
+			transition: $primary-transition;
+
+			@include media-breakpoint-up(lg) {
+				padding: ptr(36) ptr(40);
+			}
+		}
+
+		// Logo with image.
+		img {
+			width: auto;
+			max-height: 100%;
+			padding: ptr(20) ptr(40);
+		}
+	}
+
+	&__page-header {
+		background: #1f2e34 url('assets/images/pattern.jpg');
+
+		@include media-breakpoint-up(lg) {
+			background: transparent;
+		}
+	}
+
+	&__navbar-toggler {
+		display: block;
+		height: ptr(60);
+		width: 100%;
+		padding: 0;
+		margin-bottom: ptr(30);
+
+		.header & {
+			font-size: ptr(16);
+		}
+
+		.fa {
+			.header & {
+				font-size: ptr(28);
+				vertical-align: middle;
+				margin-right: ptr(12);
+			}
+		}
+
+		&:focus,
+		&:hover,
+		&:active:focus {
+			outline: none;
+		}
+	}
+}

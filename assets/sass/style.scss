@@ -1,0 +1,177 @@
+/*!
+Theme Name: Consulting Lite
+Theme URI: https://demo.proteusthemes.com/consulting/
+Author: ProteusThemes
+Author URI: https://www.proteusthemes.com/
+Description: What do all consultants need? In short, trust. This is achieved with professional presentation and the ability to communicate clearly with existing and potential clients. Whether you are an accountant, a managerial, advisory or analytical consultant – our Consulting WP theme has everything you need.
+Version: 0.0.0-tmp
+License: GPL 2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: two-columns, right-sidebar, grid-layout, custom-colors, custom-menu, featured-images, footer-widgets, full-width-template, microformats, sticky-post, theme-options, threaded-comments, translation-ready, blog, education, news, entertainment
+Text domain: consulting-lite
+*/
+
+/*
+ TABLE OF CONTENTS
+	01. Project variables............Imported variables
+	02. Twitter Bootstrap............Remove what is not neccessary
+	03. Tags.........................Like <body>, <h1> etc.
+	04. Helpers and utility classes..The general styles like .push-down-15 etc.
+	05. Components...................Imported files, like partials, Compass etc.
+*/
+
+/*------------------------------------*\
+	01. Project variables
+
+	only visible in SASS source files
+\*------------------------------------*/
+
+@import 'vars';
+
+/*------------------------------------*\
+	02. Twitter Bootstrap
+
+	Remove what is not necessary
+\*------------------------------------*/
+
+// Core variables and mixins
+@import 'variables';
+@import 'mixins';
+
+// // Reset and dependencies
+@import 'normalize';
+@import 'print';
+
+// Core CSS
+@import 'reboot';
+@import 'type';
+@import 'images';
+@import 'code';
+@import 'grid';
+@import 'tables';
+@import 'forms';
+@import 'buttons';
+
+// // Components
+@import 'animation';
+// @import 'dropdown';
+// @import 'button-group';
+// @import 'input-group';
+// @import 'custom-forms';
+// @import 'nav';
+@import 'navbar';
+@import 'card';
+// @import 'breadcrumb';
+// @import 'pagination';
+// @import 'pager';
+// @import 'labels';
+// @import 'jumbotron';
+// @import 'alert';
+// @import 'progress';
+// @import 'media';
+// @import 'list-group';
+// @import 'close';
+@import 'responsive-embed';
+
+// Components w/ JavaScript
+@import 'modal';
+// @import 'tooltip';
+// @import 'popover';
+@import 'carousel';
+
+// Utility classes
+@import 'utilities';
+
+/*------------------------------------*\
+	03. Tags
+\*------------------------------------*/
+
+html {
+	font-size: 16px;
+
+	@include media-breakpoint-up(lg) {
+		font-size: 18px;
+	}
+}
+
+/*------------------------------------*\
+	04. Helpers and very general classes
+\*------------------------------------*/
+
+.screen-reader-text {
+	// scss-lint:disable PlaceholderInExtend
+	@extend .sr-only;
+}
+
+.boxed-container {
+	background-color: #ffffff;
+}
+
+.content-area {
+	margin-bottom: ptr(90);
+}
+
+.site-main {
+	@include media-breakpoint-up(lg) {
+		padding-right: ptr(45);
+	}
+
+	.single & {
+		@include media-breakpoint-up(lg) {
+			padding-right: ptr(195);
+		}
+	}
+}
+
+.form-control {
+	font-size: ptr(15);
+	background-color: $gray-lighter;
+	color: #666666;
+	border: 0;
+	border-radius: $border-radius;
+	transition: $primary-transition;
+
+	&::placeholder {
+		transition: $primary-transition;
+	}
+
+	&:focus {
+		background-color: $gray-lighter;
+		color: #666666;
+
+		&::placeholder {
+			color: #666666;
+		}
+	}
+}
+
+/*------------------------------------*\
+	05. Components
+\*------------------------------------*/
+
+// Layout
+@import 'components/header';
+@import 'components/page-header';
+@import 'components/sidebar';
+@import 'components/footer';
+@import 'components/error-404';
+
+// Elements
+@import 'components/main-navigation';
+@import 'components/buttons';
+
+// WordPress Specific
+@import 'components/article';
+@import 'components/wp';
+@import 'components/wp-widgets';
+@import 'components/comments';
+@import 'components/pagination';
+
+// Fonts
+@import '../../bower_components/font-awesome/scss/font-awesome';
+
+/*------------------------------------*\
+	The End :)
+\*------------------------------------*/
+
+/*# sourceMappingURL=style.css.map */

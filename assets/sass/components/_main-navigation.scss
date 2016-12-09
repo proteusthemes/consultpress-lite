@@ -1,0 +1,284 @@
+/* Main Navigation */
+.main-navigation {
+	@include list-unstyled;
+	background: linear-gradient(to right, $gray-dark, darken($gray-dark, 5));
+	padding: ptr(15);
+	padding-left: 0;
+	padding-right: 0;
+	margin-bottom: 0;
+
+	.menu-item {
+		position: relative;
+
+		// :hover colors for Main Navigation links (without sub-menus).
+		&:focus,
+		&:hover,
+		&[aria-expanded="true"] {
+			> a {
+				color: #eeeeee;
+				text-decoration: none;
+			}
+
+			&::before {
+				@include media-breakpoint-up(lg) {
+					background-color: $brand-primary;
+					color: #ffffff;
+				}
+			}
+
+			&::after {
+				opacity: 1;
+				visibility: visible;
+			}
+
+			// 1. level sub-menus are open on :hover.
+			> .sub-menu {
+				opacity: 1;
+				visibility: visible;
+			}
+
+			// Show plus indicator for sub-menus only when sub-menu is open.
+			.sub-menu {
+				> .menu-item-has-children {
+					&::before {
+						@include media-breakpoint-up(lg) {
+							opacity: 1;
+							visibility: visible;
+						}
+					}
+				}
+			}
+		}
+
+		// Indicator (plus) for menu items with children
+		&::before {
+			position: absolute;
+			content: '\f067';
+			opacity: 0;
+			visibility: hidden;
+			font-family: 'FontAwesome';
+			font-size: ptr(10);
+			text-align: center;
+			line-height: ptr(25);
+			background-color: rgba(255, 255, 255, .15);
+			color: rgba(255, 255, 255, .5);
+			border-top-right-radius: $border-radius;
+			border-bottom-right-radius: $border-radius;
+			top: ptr(10);
+			left: 0;
+			width: ptr(20);
+			height: ptr(25);
+			padding-right: ptr(1);
+			transition: $primary-transition;
+
+			@include media-breakpoint-up(lg) {
+				top: calc(50% - #{ptr(12.5)});
+			}
+		}
+
+		// Indicator (arrow) for menu items on :hover and :active
+		&::after {
+			@include media-breakpoint-up(lg) {
+				position: absolute;
+				content: '\f178';
+				opacity: 0;
+				visibility: hidden;
+				font-family: 'FontAwesome';
+				font-size: ptr(15);
+				line-height: 1;
+				top: calc(50% - #{ptr(8)});
+				right: ptr(28);
+				color: #ffffff;
+				transition: $primary-transition;
+				will-change: transform;
+			}
+		}
+	}
+
+	// Main Navigation Links and Colors.
+	a {
+		display: block;
+		font-family: $secondary-font;
+		font-size: ptr(15);
+		font-weight: 900;
+		color: #eeeeee;
+		padding: ptr(12) ptr(30) ptr(9);
+
+		&:focus {
+			@include media-breakpoint-up(lg) {
+				text-decoration: none;
+				color: #eeeeee;
+			}
+		}
+	}
+
+	// Active current link.
+	> .current-menu-item {
+		> a {
+			@include media-breakpoint-up(lg) {
+				background-color: rgba(255, 255, 255, .15);
+				box-shadow: 0 3px 15px rgba(0, 0, 0, .2);
+				will-change: transform;
+			}
+		}
+
+		&::before {
+			background-color: rgba(255, 255, 255, .1);
+		}
+
+		&::after {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	// Current link style even if its menu ancestor.
+	> .current-menu-ancestor {
+		> a {
+			@include media-breakpoint-up(lg) {
+				background-color: rgba(255, 255, 255, .15);
+				will-change: transform;
+			}
+		}
+
+		&::before {
+			background-color: rgba(255, 255, 255, .1);
+		}
+
+		&::after {
+			@include media-breakpoint-up(lg) {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+
+		&.menu-item-has-children {
+			&::after {
+				@include media-breakpoint-up(lg) {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+	}
+
+	// Item with children.
+	> .menu-item-has-children {
+		// Indicator for sub-menus.
+		&::before {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	// Sub-menu items.
+	.sub-menu {
+		@include list-unstyled;
+		position: relative;
+
+		@include media-breakpoint-up(lg) {
+			position: absolute;
+			visibility: hidden;
+			opacity: 0;
+			right: 100%;
+			top: ptr(10);
+			transition: $primary-transition;
+		}
+
+		.menu-item {
+			display: block;
+
+			&:not(:last-child) {
+				> a {
+					&::after {
+						opacity: 1;
+						visibility: visible;
+					}
+				}
+			}
+
+			&:focus,
+			&:hover,
+			&[aria-expanded="true"] {
+				> a {
+					@include media-breakpoint-up(lg) {
+						background-color: darken($brand-primary, 3);
+						color: #ffffff;
+						text-decoration: none;
+					}
+
+					&::after {
+						opacity: 0;
+						visibility: hidden;
+					}
+				}
+
+				&::before {
+					color: #ffffff;
+				}
+
+				&::after {
+					opacity: 0;
+					visibility: visible;
+				}
+			}
+		}
+
+		// Sub-menu links.
+		a {
+			display: block;
+			font-family: $primary-font;
+			background-color: #47575e;
+			color: #b3b8ba;
+			padding: ptr(10.5) ptr(30);
+			transition: $primary-transition;
+
+			@include media-breakpoint-up(lg) {
+				background-color: $brand-primary;
+				color: #ffffff;
+				padding: ptr(10.5) ptr(20);
+				min-width: ptr(200);
+				white-space: nowrap;
+			}
+
+			// Line between sub-menu links.
+			&::after {
+				@include media-breakpoint-up(lg) {
+					position: absolute;
+					content: '';
+					opacity: 0;
+					visibility: hidden;
+					background-color: darken($brand-primary, 3);
+					left: ptr(15);
+					right: ptr(15);
+					height: 1px;
+					bottom: -1px;
+					z-index: 1;
+					transition: $primary-transition;
+				}
+			}
+		}
+
+		// Item with children for sub-menu.
+		> .menu-item-has-children {
+			> a {
+				@include media-breakpoint-up(lg) {
+					padding-left: ptr(30);
+				}
+			}
+
+			&::before {
+				text-align: left;
+				color: rgba(0, 0, 0, .5);
+				background-color: transparent;
+				left: ptr(15);
+			}
+		}
+
+		.sub-menu {
+			@include media-breakpoint-up(lg) {
+				top: 0;
+			}
+		}
+	}
+}

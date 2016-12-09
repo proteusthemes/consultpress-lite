@@ -1,0 +1,60 @@
+/* 05.40. Pagination */
+.pagination {
+	display: inline-block;
+	font-size: 0;
+	text-align: center;
+	border: 1px solid $gray-lighter;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, .1);
+	margin-top: ptr(53);
+
+	.page-numbers {
+		display: inline-block;
+		font-size: ptr(16);
+		font-weight: bold;
+		text-align: center;
+		line-height: ptr(62);
+		width: ptr(40);
+		height: ptr(58);
+		color: #888888;
+		vertical-align: top;
+		transition: $primary-transition;
+
+		&:focus,
+		&:hover {
+			color: $gray-dark;
+			text-decoration: none;
+		}
+	}
+
+	.current {
+		color: $gray-dark;
+	}
+
+	.dots {
+		&:focus,
+		&:hover {
+			color: #888888;
+		}
+	}
+
+	.prev,
+	.next {
+		color: $gray-dark;
+		font-size: ptr(24);
+		width: ptr(60);
+		transition: $primary-transition;
+
+		&:focus,
+		&:hover {
+			color: #000000;
+		}
+	}
+
+	.prev {
+		border-right: 1px solid $gray-lighter;
+	}
+
+	.next {
+		border-left: 1px solid $gray-lighter;
+	}
+}

@@ -1,0 +1,101 @@
+/* Buttons */
+.btn {
+	font-size: ptr(15);
+	border-width: 2px;
+	border-radius: $border-radius;
+	transition: $primary-transition;
+
+	.fa {
+		font-size: ptr(16);
+		vertical-align: middle;
+		margin-right: ptr(7);
+	}
+
+	&-primary {
+		text-shadow: 0 1px 2px rgba(0, 0, 0, .25);
+
+		&:focus {
+			background-color: $brand-primary;
+			border-color: $brand-primary;
+		}
+
+		&:hover {
+			background-color: darken($brand-primary, 6);
+			border-color: darken($brand-primary, 6);
+		}
+
+		&:active:hover {
+			background-color: darken($brand-primary, 12);
+			border-color: darken($brand-primary, 12);
+			color: #ffffff;
+		}
+	}
+
+	&-secondary {
+		text-shadow: 0 1px 2px rgba(0, 0, 0, .25);
+		background-color: $brand-secondary;
+		border-color: $brand-secondary;
+		color: #ffffff;
+
+		&:focus {
+			background-color: $brand-secondary;
+			border-color: $brand-secondary;
+			color: #ffffff;
+		}
+
+		&:hover {
+			background-color: darken($brand-secondary, 6);
+			border-color: darken($brand-secondary, 6);
+			color: #ffffff;
+		}
+
+		&:active:hover {
+			background-color: darken($brand-secondary, 12);
+			border-color: darken($brand-secondary, 12);
+			color: #ffffff;
+		}
+	}
+
+	&-dark {
+		background-color: $gray-dark;
+		color: #ffffff;
+
+		&:focus {
+			background-color: $gray-dark;
+			color: #ffffff;
+		}
+
+		&:hover {
+			background-color: darken($gray-dark, 6);
+			color: #ffffff;
+		}
+
+		&:active:hover {
+			background-color: darken($gray-dark, 12);
+			color: #ffffff;
+		}
+	}
+
+	// Specific style for featured button above Main Navigation.
+	&-featured {
+		white-space: normal;
+		margin-bottom: ptr(30);
+
+		@include media-breakpoint-up(lg) {
+			position: relative;
+			padding-right: ptr(50);
+			text-align: left;
+			margin-bottom: ptr(60);
+		}
+
+		&::after {
+			@include media-breakpoint-up(lg) {
+				position: absolute;
+				content: '\f178';
+				font-family: 'FontAwesome';
+				top: calc(50% - #{ptr(9)});
+				right: ptr(30);
+			}
+		}
+	}
+}

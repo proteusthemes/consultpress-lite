@@ -1,0 +1,20 @@
+/* Page Header */
+.page-header {
+	text-align: center;
+	padding-top: ptr(29);
+	padding-bottom: ptr(30);
+
+	@include media-breakpoint-up(lg) {
+		text-align: left;
+		max-width: calc(75% - #{ptr(38)});
+		padding-top: ptr(79);
+		padding-bottom: ptr(80);
+	}
+
+	&__title {
+		font-size: ptr(36);
+		color: #ffffff;
+		text-shadow: 0 1px 1px rgba(0, 0, 0, .5);
+		margin-bottom: 0;
+	}
+}

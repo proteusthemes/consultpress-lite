@@ -1,0 +1,149 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "28b8cb1dfd4279d25b8ac8181a34dfcb",
+    "content-hash": "150b77ae0d8674685c0e83e1c2442d65",
+    "packages": [
+        {
+            "name": "mexitek/phpcolors",
+            "version": "v0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mexitek/phpColors.git",
+                "reference": "89bf30473a68dc8845e46e9db3e536b969e18c11"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mexitek/phpColors/zipball/89bf30473a68dc8845e46e9db3e536b969e18c11",
+                "reference": "89bf30473a68dc8845e46e9db3e536b969e18c11",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Arlo Carreon",
+                    "homepage": "http://arlocarreon.com",
+                    "role": "creator"
+                }
+            ],
+            "description": "A series of methods that let you manipulate colors. Just incase you ever need different shades of one color on the fly.",
+            "homepage": "http://mexitek.github.com/phpColors/",
+            "keywords": [
+                "color",
+                "css",
+                "design",
+                "frontend",
+                "ui"
+            ],
+            "time": "2015-09-09 15:43:06"
+        },
+        {
+            "name": "proteusthemes/wai-aria-walker-nav-menu",
+            "version": "v1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/proteusthemes/WAI-ARIA-Walker_Nav_Menu.git",
+                "reference": "094b11d8e77143e29f337d128f892f15bab3ef92"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/proteusthemes/WAI-ARIA-Walker_Nav_Menu/zipball/094b11d8e77143e29f337d128f892f15bab3ef92",
+                "reference": "094b11d8e77143e29f337d128f892f15bab3ef92",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "aria-walker-nav-menu.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPLv2"
+            ],
+            "authors": [
+                {
+                    "name": "Primoz Cigler",
+                    "email": "primoz@proteusnet.com"
+                },
+                {
+                    "name": "Marko Prelec",
+                    "email": "marko.prelec@proteusnet.com"
+                }
+            ],
+            "description": "WordPress menu walker which adds appropriate WIA-ARIA roles to dropdown menus.",
+            "time": "2016-05-18 18:48:49"
+        },
+        {
+            "name": "proteusthemes/wp-customizer-utilities",
+            "version": "v2.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/proteusthemes/wp-customizer-utilities.git",
+                "reference": "5c2935e142ed0d30695eab2a78436974f391f4a1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/proteusthemes/wp-customizer-utilities/zipball/5c2935e142ed0d30695eab2a78436974f391f4a1",
+                "reference": "5c2935e142ed0d30695eab2a78436974f391f4a1",
+                "shasum": ""
+            },
+            "require": {
+                "mexitek/phpcolors": "^0.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ProteusThemes\\CustomizerUtils\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Primoz Cigler",
+                    "email": "primoz@proteusnet.com"
+                },
+                {
+                    "name": "Gregor Capuder",
+                    "email": "gregor.capuder@proteusnet.com"
+                }
+            ],
+            "description": "Advanced WordPress customizer controls and settings for better user experience.",
+            "keywords": [
+                "control",
+                "customizer",
+                "proteusthemes",
+                "theme",
+                "wordpress",
+                "wp"
+            ],
+            "time": "2016-07-08 10:11:23"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
