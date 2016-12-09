@@ -7,7 +7,7 @@
 
 $consulting_footer_bottom_txt = get_theme_mod( 'footer_bottom_txt', sprintf(
 	esc_html__( '%1$sConsulting%2$s - WordPress theme made by ProteusThemes.' , 'consulting-lite' ),
-	'<b><a href="https://www.proteusthemes.com/wordpress-themes/consulting/">',
+	'<b><a href="https://www.proteusthemes.com/wordpress-themes/consulting-lite/">',
 	'</a></b>'
 ) );
 

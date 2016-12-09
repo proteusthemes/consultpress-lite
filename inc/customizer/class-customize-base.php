@@ -221,7 +221,7 @@ class ConsultingLite_Customizer_Base {
 		// Footer.
 		$this->wp_customize->add_setting( 'footer_bottom_txt', array( 'default' => sprintf(
 			esc_html__( '%1$sConsulting%2$s - WordPress theme made by ProteusThemes.' , 'consulting-lite' ),
-			'<b><a href="https://www.proteusthemes.com/wordpress-themes/consulting/">',
+			'<b><a href="https://www.proteusthemes.com/wordpress-themes/consulting-lite/">',
 			'</a></b>'
 		) ) );
 
