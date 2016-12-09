@@ -122,7 +122,6 @@ module.exports = function ( grunt ) {
 					'wpml-config.xml',
 					'assets/**',
 					'template-parts/**',
-					'bower_components/picturefill/dist/picturefill.min.js',
 					'bower_components/requirejs/require.js',
 					'bower_components/bootstrap/js/dist/**',
 					'bower_components/font-awesome/css/font-awesome.min.css',
