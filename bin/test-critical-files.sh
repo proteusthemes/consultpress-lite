@@ -21,7 +21,6 @@ function testRequiredFiles {
 		vendor/proteusthemes/wai-aria-walker-nav-menu/wai-aria.js
 	)
 	requiredFolders=(
-		assets/sass
 		bower_components
 		bower_components/font-awesome/fonts
 		inc
