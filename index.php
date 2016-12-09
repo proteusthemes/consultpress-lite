@@ -15,8 +15,6 @@
 
 get_header();
 
-get_template_part( 'template-parts/breadcrumbs' );
-
 ?>
 
 	<div id="primary" class="content-area  container">
