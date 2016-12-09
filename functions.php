@@ -147,17 +147,14 @@ if ( ! function_exists( 'consultinglite_enqueue_scripts' ) ) {
 		// Modernizr for the frontend feature detection.
 		wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/assets/js/modernizr.custom.20160801.js', array(), null );
 
-		// Picturefill for the support of the <picture> element today.
-		wp_enqueue_script( 'picturefill', get_template_directory_uri() . '/bower_components/picturefill/dist/picturefill.min.js', array( 'modernizr' ), '2.2.1' );
-
-		// Requirejs.
-		wp_register_script( 'require.js', get_template_directory_uri() . '/bower_components/requirejs/require.js', array(), null, true );
-
 		// Array for main.js dependencies.
 		$main_deps = array( 'jquery', 'underscore' );
 
 		// Main JS file, conditionally.
 		if ( true === CONSULTINGLITE_DEVELOPMENT ) {
+			// Requirejs.
+			wp_register_script( 'require.js', get_template_directory_uri() . '/bower_components/requirejs/require.js', array(), null, true );
+
 			$main_deps[] = 'require.js';
 			wp_enqueue_script( 'consultinglite-main', get_template_directory_uri() . '/assets/js/main.js', $main_deps, CONSULTINGLITE_WP_VERSION, true );
 		}
@@ -176,18 +173,6 @@ if ( ! function_exists( 'consultinglite_enqueue_scripts' ) ) {
 		}
 	}
 	add_action( 'wp_enqueue_scripts', 'consultinglite_enqueue_scripts' );
-}
-
-
-/**
- * Register admin JS scripts
- */
-if ( ! function_exists( 'consultinglite_admin_enqueue_scripts' ) ) {
-	function consultinglite_admin_enqueue_scripts() {
-		// Register fa CSS.
-		wp_register_style( 'font-awesome', get_template_directory_uri() . '/bower_components/font-awesome/css/font-awesome.min.css', array(), '4.5.0' );
-	}
-	add_action( 'admin_enqueue_scripts', 'consultinglite_admin_enqueue_scripts' );
 }
 
 
