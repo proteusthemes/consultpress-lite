@@ -114,15 +114,8 @@ module.exports = function ( grunt ) {
 					'*.php',
 					'screenshot.{jpg,png}',
 					'readme.txt',
-					'Gruntfile.js',
-					'composer.json',
-					'composer.lock',
-					'package.json',
-					'bower.json',
-					'wpml-config.xml',
 					'assets/**',
 					'template-parts/**',
-					'bower_components/bootstrap/js/dist/**',
 					'bower_components/font-awesome/fonts/**',
 					'inc/**',
 					'vendor/**'
@@ -137,6 +130,8 @@ module.exports = function ( grunt ) {
 				config.themeSlug + '/vendor/mexitek/phpcolors/demo',
 				config.themeSlug + '/vendor/mexitek/phpcolors/test',
 				config.themeSlug + '/vendor/mexitek/phpcolors/README.md',
+				config.themeSlug + '/style.min.css',
+				config.themeSlug + '/assets/sass',
 			]
 		},
 
