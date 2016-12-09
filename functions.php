@@ -177,18 +177,6 @@ if ( ! function_exists( 'consultinglite_enqueue_scripts' ) ) {
 
 
 /**
- * Register admin JS scripts
- */
-if ( ! function_exists( 'consultinglite_admin_enqueue_scripts' ) ) {
-	function consultinglite_admin_enqueue_scripts() {
-		// Register fa CSS.
-		wp_register_style( 'font-awesome', get_template_directory_uri() . '/bower_components/font-awesome/css/font-awesome.min.css', array(), '4.5.0' );
-	}
-	add_action( 'admin_enqueue_scripts', 'consultinglite_admin_enqueue_scripts' );
-}
-
-
-/**
  * Require the files in the folder /inc/
  */
 $consultinglite_files_to_require = array(
