@@ -255,7 +255,6 @@ module.exports = function ( grunt ) {
 	// create installable zip
 	grunt.registerTask( 'zip', [
 		'copy:build',
-		'addtextdomain',
 		'clean:build',
 		'compress:build',
 	] );
