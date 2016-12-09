@@ -252,44 +252,6 @@ module.exports = function ( grunt ) {
 		'requirejs:build',
 	] );
 
-	// CI
-	// build assets
-	grunt.registerTask( 'ci', 'Builds all assets on the CI, needs to be called with --theme_version arg.', function () {
-		// get theme version, provided from cli
-		var version = grunt.option( 'theme_version' ) || null;
-
-		// check if version is string and is in semver.org format (at least a start)
-		if ( 'string' === typeof version && /^v\d{1,2}\.\d{1,2}\.\d{1,2}/.test( version ) ) { // regex that version starts like v1.2.3
-			var longVersion = version.substring( 1 ).trim(),
-				tasksToRun = [
-					'build',
-					'replace:theme_version',
-					'replace:tgmpaIssue',
-					'addtextdomain'
-				];
-
-			grunt.option( 'longVersion', longVersion );
-
-			if ( /^\d{1,2}\.\d{1,2}\.\d{1,2}(-RC\d)?$/.test( longVersion ) ) { // perform TF update, add flag file
-				grunt.log.writeln( 'Uploading a theme to the TF' );
-				grunt.log.writeln( '===========================' );
-
-				if ( grunt.file.isFile( './deploy-zipball' ) ) {
-					grunt.fail.warn( 'File for flagging TF build already exists.', 1 );
-				}
-				else {
-					// write a dummy file, if this one exists later on build a zip for the TF
-					grunt.file.write( './deploy-zipball', 'lets go!' );
-				}
-			}
-
-			grunt.task.run( tasksToRun );
-		}
-		else {
-			grunt.fail.warn( 'Version to be replaced in style.css is not specified or valid.\nUse: grunt <your-task> --theme_version=v1.2.3\n', 3 );
-		}
-	} );
-
 	// create installable zip
 	grunt.registerTask( 'zip', [
 		'copy:build',
