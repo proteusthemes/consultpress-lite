@@ -7,7 +7,7 @@
  * and that other 'pages' on your WordPress site will use a
  * different template.
  *
- * @package consultinglite-pt
+ * @package consultpresslite-pt
  */
 
 get_header();
@@ -43,7 +43,7 @@ get_template_part( 'template-parts/breadcrumbs' );
 						<!-- Main Navigation -->
 						<?php get_template_part( 'template-parts/main-navigation' ); ?>
 						<!-- Sidebar -->
-						<?php dynamic_sidebar( apply_filters( 'consultinglite_regular_page_sidebar', 'regular-page-sidebar', get_the_ID() ) ); ?>
+						<?php dynamic_sidebar( apply_filters( 'consultpresslite_regular_page_sidebar', 'regular-page-sidebar', get_the_ID() ) ); ?>
 					</div>
 				</div>
 			</div>

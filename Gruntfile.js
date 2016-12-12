@@ -7,7 +7,7 @@ module.exports = function ( grunt ) {
 		tmpdir:                  '.tmp/',
 		phpFileRegex:            '[^/]+\.php$',
 		phpFileInSubfolderRegex: '.*?\.php$',
-		themeSlug:               'consulting-lite',
+		themeSlug:               'consultpress-lite',
 	};
 
 	// configuration
@@ -215,8 +215,8 @@ module.exports = function ( grunt ) {
 				globals: {
 					jQuery:               true,
 					Modernizr:            true,
-					ConsultingLiteVars:           true,
-					ConsultingLiteSliderCaptions: true,
+					ConsultPressLiteVars:           true,
+					ConsultPressLiteSliderCaptions: true,
 					module:               true,
 					define:               true,
 					require:              true,

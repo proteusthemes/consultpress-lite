@@ -1,14 +1,14 @@
 <?php
 /**
- * Filters for ConsultingLite WP theme
+ * Filters for ConsultPressLite WP theme
  *
- * @package consultinglite-pt
+ * @package consultpresslite-pt
  */
 
 /**
- * ConsultingLiteFilters class with filter hooks
+ * ConsultPressLiteFilters class with filter hooks
  */
-class ConsultingLiteFilters {
+class ConsultPressLiteFilters {
 
 	/**
 	 * Runs on class initialization. Adds filters and actions.
@@ -21,8 +21,8 @@ class ConsultingLiteFilters {
 		add_filter( 'excerpt_more', array( $this, 'excerpt_more' ) );
 
 		// Google fonts.
-		add_filter( 'consultinglite_pre_google_web_fonts', array( $this, 'additional_fonts' ) );
-		add_filter( 'consultinglite_subsets_google_web_fonts', array( $this, 'subsets_google_web_fonts' ) );
+		add_filter( 'consultpresslite_pre_google_web_fonts', array( $this, 'additional_fonts' ) );
+		add_filter( 'consultpresslite_subsets_google_web_fonts', array( $this, 'subsets_google_web_fonts' ) );
 
 		// Embeds.
 		add_filter( 'embed_oembed_html', array( $this, 'embed_oembed_html' ), 10, 1 );
@@ -67,7 +67,7 @@ class ConsultingLiteFilters {
 	 */
 	function additional_fonts( $fonts ) {
 		/* translators: If there are characters in your language that are not supported by Roboto or Merriweather, translate this to 'off'. Do not translate into your own language. */
-		if ( 'off' !== esc_html_x( 'on', 'Roboto and Merriweather: on or off', 'consulting-lite' ) ) {
+		if ( 'off' !== esc_html_x( 'on', 'Roboto and Merriweather: on or off', 'consultpress-lite' ) ) {
 			$fonts['Roboto'] = array(
 				'400' => '400',
 				'700' => '700',
@@ -125,7 +125,7 @@ class ConsultingLiteFilters {
 	 * @return array
 	 */
 	public static function body_class( $classes ) {
-		$classes[] = 'consultinglite-pt';
+		$classes[] = 'consultpresslite-pt';
 
 		// important to determine if the sidebar should be shifted to top via JS
 		if ( has_nav_menu( 'main-menu' ) ) {
@@ -156,4 +156,4 @@ class ConsultingLiteFilters {
 }
 
 // Single instance.
-$consultinglite_filters = new ConsultingLiteFilters();
+$consultpresslite_filters = new ConsultPressLiteFilters();

@@ -2,10 +2,10 @@
 /**
  * Featured Button
  *
- * @package consultinglite-pt
+ * @package consultpresslite-pt
  */
 
-$featured_page_data = ConsultingLiteHelpers::get_featured_page_data();
+$featured_page_data = ConsultPressLiteHelpers::get_featured_page_data();
 
 ?>
 

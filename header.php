@@ -1,8 +1,8 @@
 <?php
 /**
- * The Header for ConsultingLite Theme
+ * The Header for ConsultPressLite Theme
  *
- * @package consultinglite-pt
+ * @package consultpresslite-pt
  */
 
 ?>
@@ -33,10 +33,10 @@
 							<?php
 								$custom_logo_id = get_theme_mod( 'custom_logo' );
 								$image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
-								$consulting_logo = $image[0];
+								$consultpress_logo = $image[0];
 							?>
 
-							<img src="<?php echo esc_url( $consulting_logo ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" class="img-fluid" />
+							<img src="<?php echo esc_url( $consultpress_logo ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" class="img-fluid" />
 						<?php else : ?>
 							<p class="h1  header__logo-text"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></p>
 						<?php endif; ?>
@@ -44,21 +44,21 @@
 					<!-- Only on mobile Header Widgets -->
 					<?php if ( is_active_sidebar( 'header-widgets' ) ) : ?>
 						<div class="sidebar__header-widgets  header-widgets  hidden-lg-up">
-							<?php dynamic_sidebar( apply_filters( 'consultinglite_header_widgets', 'header-widgets', get_the_ID() ) ); ?>
+							<?php dynamic_sidebar( apply_filters( 'consultpresslite_header_widgets', 'header-widgets', get_the_ID() ) ); ?>
 						</div>
 					<?php endif; ?>
 					<!-- Only on mobile Featured Button -->
 					<?php
-						$featured_page_data = ConsultingLiteHelpers::get_featured_page_data();
+						$featured_page_data = ConsultPressLiteHelpers::get_featured_page_data();
 
 						if ( ! empty( $featured_page_data ) ) :
 					?>
 						<a class="btn  btn-primary  btn-block  btn-featured  hidden-lg-up" href="<?php echo esc_url( $featured_page_data['url'] ); ?>" target="<?php echo esc_attr( $featured_page_data['target'] ); ?>"><?php echo esc_html( $featured_page_data['title'] ); ?></a>
 					<?php endif; ?>
 					<!-- Toggle button for Main Navigation on mobile -->
-					<button class="btn  btn-dark  btn-block  header__navbar-toggler  hidden-lg-up  js-sticky-mobile-option" type="button" data-toggle="collapse" data-target="#consultinglite-main-navigation"><i class="fa  fa-bars  hamburger"></i> <span><?php esc_html_e( 'MENU' , 'consulting-lite' ); ?></span></button>
+					<button class="btn  btn-dark  btn-block  header__navbar-toggler  hidden-lg-up  js-sticky-mobile-option" type="button" data-toggle="collapse" data-target="#consultpresslite-main-navigation"><i class="fa  fa-bars  hamburger"></i> <span><?php esc_html_e( 'MENU' , 'consultpress-lite' ); ?></span></button>
 					<!-- Only on mobile Main Navigation -->
-					<nav class="sidebar__main-navigation  collapse  navbar-toggleable-md  js-sticky-desktop-option  hidden-lg-up" id="consultinglite-main-navigation" aria-label="<?php esc_html_e( 'Main Menu', 'consulting-lite' ); ?>">
+					<nav class="sidebar__main-navigation  collapse  navbar-toggleable-md  js-sticky-desktop-option  hidden-lg-up" id="consultpresslite-main-navigation" aria-label="<?php esc_html_e( 'Main Menu', 'consultpress-lite' ); ?>">
 						<?php
 						if ( has_nav_menu( 'main-menu' ) ) {
 							wp_nav_menu( array(

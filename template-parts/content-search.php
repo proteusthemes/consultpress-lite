@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package consultinglite-pt
+ * @package consultpresslite-pt
  */
 
 ?>
@@ -25,7 +25,7 @@
 				<span class="article__categories"><?php the_category( ' ' ); ?></span>
 			<?php endif; ?>
 			<!-- Author -->
-			<span class="article__author"><i class="fa fa-user" aria-hidden="true"></i> <?php esc_html_e( 'By' , 'consulting-lite' ) ?> <span class="p-author"><?php the_author(); ?></span></span>
+			<span class="article__author"><i class="fa fa-user" aria-hidden="true"></i> <?php esc_html_e( 'By' , 'consultpress-lite' ) ?> <span class="p-author"><?php the_author(); ?></span></span>
 			<!-- Date -->
 			<a class="article__date" href="<?php the_permalink(); ?>"><time class="dt-published" datetime="<?php the_time( 'c' ); ?>"><i class="fa fa-calendar-o" aria-hidden="true"></i> <?php echo get_the_date(); ?></time></a>
 		</div>
@@ -35,7 +35,7 @@
 			<?php echo wp_kses_post( get_the_excerpt() ); ?>
 		</p>
 		<p>
-			<a href="<?php echo esc_url( get_permalink() ); ?>" class="more-link"><?php printf( esc_html__( 'Read more %s', 'consulting-lite' ), the_title( '<span class="screen-reader-text">', '</span>', false ) ); ?></a>
+			<a href="<?php echo esc_url( get_permalink() ); ?>" class="more-link"><?php printf( esc_html__( 'Read more %s', 'consultpress-lite' ), the_title( '<span class="screen-reader-text">', '</span>', false ) ); ?></a>
 		</p>
 	</div><!-- .article__content -->
 </article><!-- .asrticle -->

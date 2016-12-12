@@ -4,13 +4,13 @@
  * Meaning that this stuff loads always, no matter if the global $wp_cutomize
  * variable is present or not.
  *
- * @package consultinglite-pt
+ * @package consultpresslite-pt
  */
 
 /**
  * Customizer frontend related code
  */
-class ConsultingLite_Customize_Frontent {
+class ConsultPressLite_Customize_Frontent {
 
 	/**
 	 * Add actions to load the right staff at the right places (header, footer).
@@ -30,7 +30,7 @@ class ConsultingLite_Customize_Frontent {
 		$css_string = self::get_customizer_css();
 
 		if ( $css_string ) {
-			wp_add_inline_style( 'consultinglite-main', $css_string );
+			wp_add_inline_style( 'consultpresslite-main', $css_string );
 		}
 	}
 
@@ -62,7 +62,7 @@ class ConsultingLite_Customize_Frontent {
 		$cached_css = get_theme_mod( 'cached_css', '' );
 
 		$out .= '/* WP Customizer start */' . PHP_EOL;
-		$out .= apply_filters( 'consultinglite_cached_css', $cached_css );
+		$out .= apply_filters( 'consultpresslite_cached_css', $cached_css );
 		$out .= PHP_EOL . '/* WP Customizer end */';
 
 		return $out;

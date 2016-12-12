@@ -10,7 +10,7 @@
  * E.g., it puts together the home page when no home.php file exists.
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package consultinglite-pt
+ * @package consultpresslite-pt
  */
 
 get_header();
@@ -63,7 +63,7 @@ get_template_part( 'template-parts/breadcrumbs' );
 						<!-- Main Navigation -->
 						<?php get_template_part( 'template-parts/main-navigation' ); ?>
 						<!-- Sidebar -->
-						<?php dynamic_sidebar( apply_filters( 'consultinglite_blog_sidebar', 'blog-sidebar', get_the_ID() ) ); ?>
+						<?php dynamic_sidebar( apply_filters( 'consultpresslite_blog_sidebar', 'blog-sidebar', get_the_ID() ) ); ?>
 					</div>
 				</div>
 			</div>

@@ -2,7 +2,7 @@
 /**
  * Customizer
  *
- * @package consultinglite-pt
+ * @package consultpresslite-pt
  */
 
 use ProteusThemes\CustomizerUtils\Setting;
@@ -15,7 +15,7 @@ use ProteusThemes\CustomizerUtils\Helpers as WpUtilsHelpers;
  *
  * @link http://codex.wordpress.org/Theme_Customization_API
  */
-class ConsultingLite_Customizer_Base {
+class ConsultPressLite_Customizer_Base {
 	/**
 	 * The singleton manager instance
 	 *
@@ -220,8 +220,8 @@ class ConsultingLite_Customizer_Base {
 
 		// Footer.
 		$this->wp_customize->add_setting( 'footer_bottom_txt', array( 'default' => sprintf(
-			esc_html__( '%1$sConsulting%2$s - WordPress theme made by ProteusThemes.' , 'consulting-lite' ),
-			'<b><a href="https://www.proteusthemes.com/wordpress-themes/consulting-lite/">',
+			esc_html__( '%1$sConsultPress%2$s - WordPress theme made by ProteusThemes.' , 'consultpress-lite' ),
+			'<b><a href="https://www.proteusthemes.com/wordpress-themes/consultpress-lite/">',
 			'</a></b>'
 		) ) );
 
@@ -240,9 +240,9 @@ class ConsultingLite_Customizer_Base {
 	 * @return void
 	 */
 	public function register_sections() {
-		$this->wp_customize->add_section( 'consultinglite_theme_options', array(
-			'title'       => esc_html__( 'Theme Options', 'consulting-lite' ),
-			'description' => esc_html__( 'All Consulting Lite theme specific settings.', 'consulting-lite' ),
+		$this->wp_customize->add_section( 'consultpresslite_theme_options', array(
+			'title'       => esc_html__( 'Theme Options', 'consultpress-lite' ),
+			'description' => esc_html__( 'All ConsultPress Lite theme specific settings.', 'consultpress-lite' ),
 			'priority'    => 5,
 		) );
 	}
@@ -274,8 +274,8 @@ class ConsultingLite_Customizer_Base {
 			'logo_top_margin',
 			array(
 				'type'        => 'number',
-				'label'       => esc_html__( 'Logo top margin', 'consulting-lite' ),
-				'description' => esc_html__( 'In pixels.', 'consulting-lite' ),
+				'label'       => esc_html__( 'Logo top margin', 'consultpress-lite' ),
+				'description' => esc_html__( 'In pixels.', 'consultpress-lite' ),
 				'priority'    => 9,
 				'section'     => 'title_tagline',
 				'input_attrs' => array(
@@ -286,19 +286,19 @@ class ConsultingLite_Customizer_Base {
 			)
 		);
 
-		// Section: consultinglite_theme_options.
+		// Section: consultpresslite_theme_options.
 		$this->wp_customize->add_control( 'featured_page_select', array(
 			'type'        => 'select',
 			'priority'    => 10,
-			'label'       => esc_html__( 'Featured page', 'consulting-lite' ),
-			'description' => esc_html__( 'To which page should the Featured Page button link to?', 'consulting-lite' ),
-			'section'     => 'consultinglite_theme_options',
+			'label'       => esc_html__( 'Featured page', 'consultpress-lite' ),
+			'description' => esc_html__( 'To which page should the Featured Page button link to?', 'consultpress-lite' ),
+			'section'     => 'consultpresslite_theme_options',
 			'choices'     => WpUtilsHelpers::get_all_pages_id_title(),
 		) );
 		$this->wp_customize->add_control( 'featured_page_custom_text', array(
 			'priority'        => 15,
-			'label'           => esc_html__( 'Custom Button Text', 'consulting-lite' ),
-			'section'         => 'consultinglite_theme_options',
+			'label'           => esc_html__( 'Custom Button Text', 'consultpress-lite' ),
+			'section'         => 'consultpresslite_theme_options',
 			'active_callback' => function() {
 				return WpUtilsHelpers::is_theme_mod_specific_value( 'featured_page_select', 'custom-url' );
 			},
@@ -306,8 +306,8 @@ class ConsultingLite_Customizer_Base {
 
 		$this->wp_customize->add_control( 'featured_page_custom_url', array(
 			'priority'        => 20,
-			'label'           => esc_html__( 'Custom URL', 'consulting-lite' ),
-			'section'         => 'consultinglite_theme_options',
+			'label'           => esc_html__( 'Custom URL', 'consultpress-lite' ),
+			'section'         => 'consultpresslite_theme_options',
 			'active_callback' => function() {
 				return WpUtilsHelpers::is_theme_mod_specific_value( 'featured_page_select', 'custom-url' );
 			},
@@ -316,8 +316,8 @@ class ConsultingLite_Customizer_Base {
 		$this->wp_customize->add_control( 'featured_page_open_in_new_window', array(
 			'type'            => 'checkbox',
 			'priority'        => 25,
-			'label'           => esc_html__( 'Open link in a new window/tab.', 'consulting-lite' ),
-			'section'         => 'consultinglite_theme_options',
+			'label'           => esc_html__( 'Open link in a new window/tab.', 'consultpress-lite' ),
+			'section'         => 'consultpresslite_theme_options',
 			'active_callback' => function() {
 				return ( ! WpUtilsHelpers::is_theme_mod_specific_value( 'featured_page_select', 'none' ) );
 			},
@@ -328,17 +328,17 @@ class ConsultingLite_Customizer_Base {
 			'primary_color',
 			array(
 				'priority' => 5,
-				'label'    => esc_html__( 'Primary color', 'consulting-lite' ),
-				'section'  => 'consultinglite_theme_options',
+				'label'    => esc_html__( 'Primary color', 'consultpress-lite' ),
+				'section'  => 'consultpresslite_theme_options',
 			)
 		) );
 
 		$this->wp_customize->add_control( 'footer_bottom_txt', array(
 			'type'        => 'text',
 			'priority'    => 30,
-			'label'       => esc_html__( 'Footer bottom text', 'consulting-lite' ),
-			'description' => esc_html__( 'You can use HTML: a, span, i, em, strong, img.', 'consulting-lite' ),
-			'section'     => 'consultinglite_theme_options',
+			'label'       => esc_html__( 'Footer bottom text', 'consultpress-lite' ),
+			'description' => esc_html__( 'You can use HTML: a, span, i, em, strong, img.', 'consultpress-lite' ),
+			'section'     => 'consultpresslite_theme_options',
 		) );
 	}
 }

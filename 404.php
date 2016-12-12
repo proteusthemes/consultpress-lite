@@ -2,7 +2,7 @@
 /**
  * 404 page
  *
- * @package consultinglite-pt
+ * @package consultpresslite-pt
  */
 
 get_header();
@@ -12,12 +12,12 @@ get_header();
 <div id="primary" class="content-area  error-404  container">
 	<div class="row">
 		<main id="main" class="site-main  col-xs-12  col-lg-9" role="main">
-			<p class="h2  error-404__subtitle"><?php esc_html_e( 'You landed on the wrong side of the page' , 'consulting-lite' ); ?></p>
+			<p class="h2  error-404__subtitle"><?php esc_html_e( 'You landed on the wrong side of the page' , 'consultpress-lite' ); ?></p>
 			<p class="error-404__text">
 			<?php
 				printf(
 					/* translators: the first %s for line break, the second and third %s for link to home page wrap */
-					esc_html__( 'Page you are looking for is not here. %1$s Go %2$sHome%3$s or try to search:' , 'consulting-lite' ),
+					esc_html__( 'Page you are looking for is not here. %1$s Go %2$sHome%3$s or try to search:' , 'consultpress-lite' ),
 					'<br>',
 					'<b><a href="' . esc_url( home_url( '/' ) ) . '">',
 					'</a></b>'
@@ -39,7 +39,7 @@ get_header();
 					<!-- Main Navigation -->
 					<?php get_template_part( 'template-parts/main-navigation' ); ?>
 					<!-- Sidebar -->
-					<?php dynamic_sidebar( apply_filters( 'consultinglite_regular_page_sidebar', 'regular-page-sidebar', get_the_ID() ) ); ?>
+					<?php dynamic_sidebar( apply_filters( 'consultpresslite_regular_page_sidebar', 'regular-page-sidebar', get_the_ID() ) ); ?>
 				</div>
 			</div>
 		</div>

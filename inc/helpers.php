@@ -2,13 +2,13 @@
 /**
  * Helper functions
  *
- * @package consultinglite-pt
+ * @package consultpresslite-pt
  */
 
 /**
- * ConsultingLiteHelpers class with static methods
+ * ConsultPressLiteHelpers class with static methods
  */
-class ConsultingLiteHelpers {
+class ConsultPressLiteHelpers {
 	/**
 	 * Get logo dimensions from the db
 	 *
@@ -33,7 +33,7 @@ class ConsultingLiteHelpers {
 		global $post;
 		printf(
 			/* translators: %s represents a number */
-			_n( '%s Comment', '%s Comments', get_comments_number(), 'consulting-lite' ), number_format_i18n( get_comments_number() )
+			_n( '%s Comment', '%s Comments', get_comments_number(), 'consultpress-lite' ), number_format_i18n( get_comments_number() )
 		);
 	}
 
@@ -49,14 +49,14 @@ class ConsultingLiteHelpers {
 		$fonts     = array();
 		$subsets   = array( 'latin' );
 
-		$fonts = apply_filters( 'consultinglite_pre_google_web_fonts', $fonts );
+		$fonts = apply_filters( 'consultpresslite_pre_google_web_fonts', $fonts );
 
 		foreach ( $fonts as $key => $value ) {
 			$fonts[ $key ] = $key . ':' . implode( ',', $value );
 		}
 
 		/* translators: To add an additional character subset specific to your language, translate this to 'greek', 'cyrillic', 'devanagari' or 'vietnamese'. Do not translate into your own language. */
-		$subset = esc_html_x( 'no-subset', 'Add new subset (greek, cyrillic, devanagari, vietnamese)', 'consulting-lite' );
+		$subset = esc_html_x( 'no-subset', 'Add new subset (greek, cyrillic, devanagari, vietnamese)', 'consultpress-lite' );
 		if ( 'cyrillic' == $subset ) {
 			array_push( $subsets, 'cyrillic', 'cyrillic-ext' );
 		} elseif ( 'greek' == $subset ) {
@@ -67,7 +67,7 @@ class ConsultingLiteHelpers {
 			array_push( $subsets, 'vietnamese' );
 		}
 
-		$subsets = apply_filters( 'consultinglite_subsets_google_web_fonts', $subsets );
+		$subsets = apply_filters( 'consultpresslite_subsets_google_web_fonts', $subsets );
 
 		if ( $fonts ) {
 			$fonts_url = add_query_arg(
@@ -79,7 +79,7 @@ class ConsultingLiteHelpers {
 			);
 		}
 
-		return apply_filters( 'consultinglite_google_web_fonts_url', $fonts_url );
+		return apply_filters( 'consultpresslite_google_web_fonts_url', $fonts_url );
 	}
 
 
@@ -105,7 +105,7 @@ class ConsultingLiteHelpers {
 							'depth' => $depth,
 							'before' => '',
 						) ) ); ?>
-						<?php edit_comment_link( esc_html__( 'Edit', 'consulting-lite' ), '' ); ?>
+						<?php edit_comment_link( esc_html__( 'Edit', 'consultpress-lite' ), '' ); ?>
 					</div>
 					<cite class="comment__author  vcard">
 						<?php echo get_comment_author_link(); ?>
@@ -115,7 +115,7 @@ class ConsultingLiteHelpers {
 					</time>
 					<div class="comment__text">
 						<?php if ( '0' == $comment->comment_approved ) : ?>
-						<p class="comment__awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.' , 'consulting-lite' ); ?></p>
+						<p class="comment__awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.' , 'consultpress-lite' ); ?></p>
 						<?php endif; ?>
 
 						<?php comment_text(); ?>

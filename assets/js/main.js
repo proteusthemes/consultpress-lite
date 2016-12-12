@@ -1,4 +1,4 @@
-/* global ConsultingLiteVars, _ */
+/* global ConsultPressLiteVars, _ */
 
 // config
 require.config( {
@@ -18,7 +18,7 @@ require.config( {
 } );
 
 require.config( {
-	baseUrl: ConsultingLiteVars.pathToTheme
+	baseUrl: ConsultPressLiteVars.pathToTheme
 } );
 
 require( [
