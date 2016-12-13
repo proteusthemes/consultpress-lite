@@ -15,7 +15,7 @@
 		<?php if ( have_comments() ) : ?>
 
 			<div class="comments__container">
-				<?php wp_list_comments( array( 'callback' => 'ConsultPressLiteHelpers::custom_comment', 'avatar_size' => '90' ) ); ?>
+				<?php wp_list_comments( array( 'callback' => 'ConsultPressLiteHelpers::custom_comment', 'avatar_size' => '75' ) ); ?>
 			</div>
 
 			<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through. ?>
