@@ -115,12 +115,6 @@ html {
 	@include media-breakpoint-up(lg) {
 		padding-right: ptr(45);
 	}
-
-	.single & {
-		@include media-breakpoint-up(lg) {
-			padding-right: ptr(195);
-		}
-	}
 }
 
 .form-control {
