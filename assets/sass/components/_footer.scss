@@ -5,7 +5,7 @@
 	&__container {
 		position: relative;
 		background-color: $gray-dark;
-		color: #858b8d;
+		color: #a9aeaf;
 	}
 
 	&-top {
@@ -66,7 +66,7 @@
 			text-align: center;
 			line-height: ptr(70);
 			background-color: rgba(255, 255, 255, .1);
-			color: #858b8d;
+			color: #a9aeaf;
 			height: ptr(70);
 			transition: $primary-transition;
 
@@ -79,7 +79,7 @@
 			&:focus {
 				text-decoration: none;
 				background-color: rgba(255, 255, 255, .1);
-				color: #858b8d;
+				color: #a9aeaf;
 			}
 
 			&:hover {

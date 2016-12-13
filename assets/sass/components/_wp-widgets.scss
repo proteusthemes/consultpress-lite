@@ -363,6 +363,21 @@
 	}
 }
 
+
+.footer {
+	.widget_nav_menu {
+		a {
+			display: block;
+			font-weight: bold;
+			padding: ptr(8) 0;
+
+			@include media-breakpoint-up(lg) {
+				padding: 0 0 ptr(5);
+			}
+		}
+	}
+}
+
 .textwidget {
 	font-size: ptr(16);
 }
