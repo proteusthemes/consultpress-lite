@@ -103,10 +103,6 @@ html {
 	@extend .sr-only;
 }
 
-.boxed-container {
-	background-color: #ffffff;
-}
-
 .content-area {
 	margin-bottom: ptr(90);
 }
@@ -149,6 +145,7 @@ html {
 @import 'components/sidebar';
 @import 'components/footer';
 @import 'components/error-404';
+@import 'components/boxed-container';
 
 // Elements
 @import 'components/main-navigation';
