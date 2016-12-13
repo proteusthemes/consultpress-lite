@@ -44,17 +44,24 @@
 		width: ptr(60);
 		transition: $primary-transition;
 
-		&:focus,
+		&:focus {
+			background-color: transparent;
+			color: #000000;
+		}
+
 		&:hover {
+			background-color: $gray-lighter;
 			color: #000000;
 		}
 	}
 
 	.prev {
 		border-right: 1px solid $gray-lighter;
+		margin-right: ptr(17);
 	}
 
 	.next {
 		border-left: 1px solid $gray-lighter;
+		margin-left: ptr(17);
 	}
 }
