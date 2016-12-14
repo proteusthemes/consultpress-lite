@@ -7,6 +7,10 @@
 	box-shadow: 0 1px 4px rgba(0, 0, 0, .1);
 	margin-top: ptr(53);
 
+	.nav-links {
+		margin: 0 ptr(17);
+	}
+
 	.page-numbers {
 		display: inline-block;
 		font-size: ptr(16);
@@ -58,10 +62,12 @@
 	.prev {
 		border-right: 1px solid $gray-lighter;
 		margin-right: ptr(17);
+		margin-left: ptr(-17);
 	}
 
 	.next {
 		border-left: 1px solid $gray-lighter;
 		margin-left: ptr(17);
+		margin-right: ptr(-17);
 	}
 }
