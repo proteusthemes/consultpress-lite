@@ -154,8 +154,8 @@ class ConsultPressLite_Customizer_Base {
 						'name' => 'background-color',
 						'selectors' => array(
 							'@media (min-width: 992px)' => array(
-								'.main-navigation .menu-item:focus::before',
-								'.main-navigation .menu-item:hover::before',
+								'.main-navigation > .menu-item:focus::before',
+								'.main-navigation > .menu-item:hover::before',
 								'.main-navigation .sub-menu a',
 							),
 						),
