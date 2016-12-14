@@ -234,12 +234,33 @@ td {
 // Post password form.
 .post-password-form {
 	label {
+		@include media-breakpoint-down(sm) {
+			width: 100%;
+		}
+
 		input {
-			border: 2px solid rgba(0, 0, 0, .1);
-			background-color: transparent;
-			color: $gray-light;
 			text-shadow: none;
 			font-weight: normal;
+			background-color: $gray-lighter;
+			color: #666666;
+			border: 0;
+			border-radius: $border-radius;
+			margin-top: ptr(2);
+			transition: $primary-transition;
+
+			&::placeholder {
+				transition: $primary-transition;
+			}
+
+			&:focus {
+				background-color: $gray-lighter;
+				color: #666666;
+				outline: none;
+
+				&::placeholder {
+					color: #666666;
+				}
+			}
 		}
 	}
 
@@ -254,10 +275,23 @@ td {
 		border-radius: $border-radius;
 		text-shadow: 0 1px 2px rgba(0, 0, 0, .2);
 		padding: 0 ptr(10);
+
+		@include media-breakpoint-down(sm) {
+			width: 100%;
+		}
 	}
 }
 
 // Needed classes for the theme check.
 .bypostauthor {
 	position: static;
+}
+
+.multi-page {
+	margin-top: ptr(30);
+
+	.btn {
+		padding: ptr(3.5) ptr(10);
+		margin-right: ptr(2);
+	}
 }
