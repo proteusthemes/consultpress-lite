@@ -11,6 +11,16 @@ class ConsultPressLiteFiltersTest extends WP_UnitTestCase {
 		$this->assertEquals( $expected, $actual );
 	}
 
+	function test_filter_body_class_boxed() {
+		set_theme_mod( 'layout_mode', 'boxed' );
+
+		$expected = [ 'consultpresslite-pt', 'is-main-menu-undefined', 'boxed' ];
+
+		$actual = ConsultPressLiteFilters::body_class( [] );
+
+		$this->assertEquals( $expected, $actual );
+	}
+
 	function test_filter_post_class() {
 		$expected = [ 'clearfix', 'article' ];
 		$actual = ConsultPressLiteFilters::post_class( [] );

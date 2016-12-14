@@ -134,6 +134,11 @@ class ConsultPressLiteFilters {
 			$classes[] = 'is-main-menu-undefined';
 		}
 
+		// Theme layout mode.
+		if ( 'boxed' === get_theme_mod( 'layout_mode', 'wide' ) ) {
+			$classes[] = 'boxed';
+		}
+
 		return $classes;
 	}
 
