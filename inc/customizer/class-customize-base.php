@@ -209,6 +209,9 @@ class ConsultPressLite_Customizer_Base {
 	 * @return void
 	 */
 	public function register_settings() {
+		// Layout mode.
+		$this->wp_customize->add_setting( 'layout_mode', array( 'default' => 'wide' ) );
+
 		// Logo
 		$this->wp_customize->add_setting( 'logo_top_margin', array( 'default' => 0 ) );
 
@@ -287,6 +290,17 @@ class ConsultPressLite_Customizer_Base {
 		);
 
 		// Section: consultpresslite_theme_options.
+		$this->wp_customize->add_control( 'layout_mode', array(
+			'type'     => 'select',
+			'priority' => 5,
+			'label'    => esc_html__( 'Layout', 'consultpress-lite' ),
+			'section'  => 'consultpresslite_theme_options',
+			'choices'  => array(
+				'wide'  => esc_html__( 'Wide', 'consultpress-lite' ),
+				'boxed' => esc_html__( 'Boxed', 'consultpress-lite' ),
+			),
+		) );
+
 		$this->wp_customize->add_control( 'featured_page_select', array(
 			'type'        => 'select',
 			'priority'    => 10,
@@ -295,6 +309,7 @@ class ConsultPressLite_Customizer_Base {
 			'section'     => 'consultpresslite_theme_options',
 			'choices'     => WpUtilsHelpers::get_all_pages_id_title(),
 		) );
+
 		$this->wp_customize->add_control( 'featured_page_custom_text', array(
 			'priority'        => 15,
 			'label'           => esc_html__( 'Custom Button Text', 'consultpress-lite' ),
