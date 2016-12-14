@@ -108,6 +108,10 @@
 		margin-top: ptr(30);
 		margin-bottom: 0;
 
+		@include media-breakpoint-down(sm) {
+			padding-left: ptr(10);
+		}
+
 		.comment__inner {
 			box-shadow: none;
 			padding: 0;
