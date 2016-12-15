@@ -11,7 +11,7 @@ get_header();
 
 <div id="primary" class="content-area  error-404  container">
 	<div class="row">
-		<main id="main" class="site-main  col-xs-12  col-lg-9" role="main">
+		<main id="main" class="site-main  col-xs-12  col-lg-9">
 			<p class="h2  error-404__subtitle"><?php esc_html_e( 'You landed on the wrong side of the page' , 'consultpress-lite' ); ?></p>
 			<p class="error-404__text">
 			<?php

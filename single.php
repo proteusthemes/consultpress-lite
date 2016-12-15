@@ -11,7 +11,7 @@ get_header();
 
 	<div id="primary" class="content-area  container">
 		<div class="row">
-			<main id="main" class="site-main  col-xs-12  col-lg-9" role="main">
+			<main id="main" class="site-main  col-xs-12  col-lg-9">
 				<?php while ( have_posts() ) : the_post(); ?>
 
 					<?php get_template_part( 'template-parts/content', 'single' ); ?>

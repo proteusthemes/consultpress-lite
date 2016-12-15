@@ -11,7 +11,7 @@ get_header();
 
 	<div id="primary" class="content-area  container">
 		<div class="row">
-			<main id="main" class="site-main  col-xs-12  col-lg-9" role="main">
+			<main id="main" class="site-main  col-xs-12  col-lg-9">
 				<?php if ( have_posts() ) : ?>
 
 					<?php /* Start the Loop */ ?>
