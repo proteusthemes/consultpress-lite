@@ -8,7 +8,7 @@
 if ( has_nav_menu( 'main-menu' ) ) {
 ?>
 
-<nav class="sidebar__main-navigation  collapse  navbar-toggleable-md  js-sticky-desktop-option  hidden-md-down" id="consultpresslite-main-navigation" aria-label="<?php esc_html_e( 'Main Menu', 'consultpress-lite' ); ?>">
+<nav class="sidebar__main-navigation  collapse  navbar-toggleable-md  js-sticky-desktop-option  hidden-md-down" id="consultpresslite-main-navigation-desktop" aria-label="<?php esc_html_e( 'Main Menu', 'consultpress-lite' ); ?>">
 	<?php
 		wp_nav_menu( array(
 			'theme_location' => 'main-menu',
