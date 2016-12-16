@@ -177,6 +177,7 @@ class ConsultPressLite_Customizer_Base {
 							'noop' => array(
 								'.btn-primary',
 								'.btn-primary:focus',
+								'blockquote',
 							),
 						),
 					),

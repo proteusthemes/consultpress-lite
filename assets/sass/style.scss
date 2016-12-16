@@ -94,6 +94,16 @@ html {
 	}
 }
 
+pre {
+	background-color: $gray-lightest;
+	padding: ptr(30);
+}
+
+blockquote {
+	border-left: 3px solid $brand-primary;
+	padding-left: ptr(27);
+}
+
 /*------------------------------------*\
 	04. Helpers and very general classes
 \*------------------------------------*/
