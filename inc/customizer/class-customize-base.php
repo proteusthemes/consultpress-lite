@@ -229,6 +229,9 @@ class ConsultPressLite_Customizer_Base {
 			'</a></b>'
 		) ) );
 
+		// Theme Info.
+		$this->wp_customize->add_setting( 'theme_info_text' );
+
 		// All the DynamicCSS settings.
 		foreach ( $this->dynamic_css as $setting_id => $args ) {
 			$this->wp_customize->add_setting(
@@ -248,6 +251,12 @@ class ConsultPressLite_Customizer_Base {
 			'title'       => esc_html__( 'Theme Options', 'consultpress-lite' ),
 			'description' => esc_html__( 'All ConsultPress Lite theme specific settings.', 'consultpress-lite' ),
 			'priority'    => 5,
+		) );
+
+		$this->wp_customize->add_section( 'consultpresslite_theme_info', array(
+			'title'       => esc_html__( 'Theme Info', 'consultpress-lite' ),
+			'description' => esc_html__( 'More information about ConsultPress.', 'consultpress-lite' ),
+			'priority'    => 10,
 		) );
 	}
 
@@ -355,6 +364,20 @@ class ConsultPressLite_Customizer_Base {
 			'label'       => esc_html__( 'Footer bottom text', 'consultpress-lite' ),
 			'description' => esc_html__( 'You can use HTML: a, span, i, em, strong, img.', 'consultpress-lite' ),
 			'section'     => 'consultpresslite_theme_options',
+		) );
+
+		// Section: consultpresslite_theme_info.
+		$this->wp_customize->add_control( 'theme_info_text', array(
+			'type'        => 'hidden',
+			'priority'    => 5,
+			'description' => sprintf( esc_html__( '%1$sView Documentation%2$s %3$s %4$sView Demo%2$s %3$s %5$sView ConsultPress Pro%2$s' , 'consultpress-lite' ),
+			'<b><a style="display: block; font-style: normal; height: 45px; line-height: 45px;" class="button" href="https://demo.proteusthemes.com/consultpress-lite/documentation/" target="_blank">',
+			'</a></b>',
+			'<hr>',
+			'<b><a style="display: block; font-style: normal; height: 45px; line-height: 45px;" class="button" href="https://demo.proteusthemes.com/consultpress-lite/" target="_blank">',
+			'<b><a style="display: block; font-style: normal; height: 45px; line-height: 45px;" class="button" href="https://www.proteusthemes.com/wordpress-themes/consultpress/" target="_blank">'
+			),
+			'section'     => 'consultpresslite_theme_info',
 		) );
 	}
 }
