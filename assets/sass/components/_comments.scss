@@ -19,6 +19,20 @@
 			color: $gray-light;
 		}
 	}
+
+	&__navigation {
+		display: inline-block;
+		width: 100%;
+		margin-bottom: ptr(30);
+
+		.assistive-text {
+			margin-top: ptr(30);
+		}
+	}
+
+	.pingback {
+		@include list-unstyled;
+	}
 }
 
 .comment {

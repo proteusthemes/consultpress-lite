@@ -20,7 +20,7 @@
 				</div>
 
 				<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through. ?>
-					<nav id="comment-nav-below" class="text-xs-center  text-uppercase" role="navigation">
+					<nav id="comment-nav-below" class="comments__navigation" role="navigation">
 						<h3 class="assistive-text"><?php esc_html_e( 'Comment Navigation' , 'consultpress-lite' ); ?></h3>
 						<div class="nav-previous  pull-left"><?php previous_comments_link( esc_html__( '&larr; Older Comments' , 'consultpress-lite' ) ); ?></div>
 						<div class="nav-next  pull-right"><?php next_comments_link( esc_html__( 'Newer Comments &rarr;' , 'consultpress-lite' ) ); ?></div>
