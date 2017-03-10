@@ -12,6 +12,33 @@ if ( version_compare( phpversion(), '5.3.2', '<' ) ) {
 }
 
 
+// Create a helper function for easy SDK access.
+function consultpresslite_fs() {
+		global $consultpresslite_fs;
+
+		if ( ! isset( $consultpresslite_fs ) ) {
+				// Include Freemius SDK.
+				require_once dirname(__FILE__) . '/vendor/freemius/wordpress-sdk/start.php';
+
+				$consultpresslite_fs = fs_dynamic_init( array(
+						'id'                  => '862',
+						'slug'                => 'consultpress-lite',
+						'type'                => 'theme',
+						'public_key'          => 'pk_14da83677b7eb68ed258c917c92d0',
+						'is_premium'          => false,
+						'has_premium_version' => false,
+						'has_addons'          => false,
+						'has_paid_plans'      => false,
+				) );
+		}
+
+		return $consultpresslite_fs;
+}
+
+// Init Freemius.
+consultpresslite_fs();
+
+
 // Composer autoloader.
 require_once trailingslashit( get_template_directory() ) . 'vendor/autoload.php';
 
