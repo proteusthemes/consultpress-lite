@@ -4,27 +4,28 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3c88b185ce2253f02557929a2654d118",
-    "content-hash": "4a343a324ee91ccb278dccdb4dd1f6ad",
+    "hash": "1c85ac26e54b095321413ccc442d050b",
+    "content-hash": "6f3d082814c611061969e5bd64bb9875",
     "packages": [
         {
             "name": "freemius/wordpress-sdk",
-            "version": "1.2.1.5",
+            "version": "dev-feature/fs-theme-mode-v2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Freemius/wordpress-sdk.git",
-                "reference": "0c132a52b69dd6bc160112d2cf7399702d95599b"
+                "reference": "654d542a55563706282b698b27ea5e0fad32a3ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Freemius/wordpress-sdk/zipball/0c132a52b69dd6bc160112d2cf7399702d95599b",
-                "reference": "0c132a52b69dd6bc160112d2cf7399702d95599b",
+                "url": "https://api.github.com/repos/Freemius/wordpress-sdk/zipball/654d542a55563706282b698b27ea5e0fad32a3ef",
+                "reference": "654d542a55563706282b698b27ea5e0fad32a3ef",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.2"
             },
             "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0+"
             ],
@@ -36,11 +37,7 @@
                 "sdk",
                 "wordpress"
             ],
-            "support": {
-                "source": "https://github.com/Freemius/wordpress-sdk/tree/1.2.1.5",
-                "issues": "https://github.com/Freemius/wordpress-sdk/issues"
-            },
-            "time": "2016-12-13 01:17:43"
+            "time": "2017-02-22 12:06:45"
         },
         {
             "name": "mexitek/phpcolors",
@@ -176,7 +173,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "freemius/wordpress-sdk": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
