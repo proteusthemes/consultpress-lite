@@ -4,9 +4,44 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "28b8cb1dfd4279d25b8ac8181a34dfcb",
-    "content-hash": "150b77ae0d8674685c0e83e1c2442d65",
+    "hash": "3c88b185ce2253f02557929a2654d118",
+    "content-hash": "4a343a324ee91ccb278dccdb4dd1f6ad",
     "packages": [
+        {
+            "name": "freemius/wordpress-sdk",
+            "version": "1.2.1.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Freemius/wordpress-sdk.git",
+                "reference": "0c132a52b69dd6bc160112d2cf7399702d95599b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Freemius/wordpress-sdk/zipball/0c132a52b69dd6bc160112d2cf7399702d95599b",
+                "reference": "0c132a52b69dd6bc160112d2cf7399702d95599b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2"
+            },
+            "type": "library",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Freemius WordPress SDK",
+            "homepage": "https://freemius.com",
+            "keywords": [
+                "freemius",
+                "plugin",
+                "sdk",
+                "wordpress"
+            ],
+            "support": {
+                "source": "https://github.com/Freemius/wordpress-sdk/tree/1.2.1.5",
+                "issues": "https://github.com/Freemius/wordpress-sdk/issues"
+            },
+            "time": "2016-12-13 01:17:43"
+        },
         {
             "name": "mexitek/phpcolors",
             "version": "v0.4",
@@ -91,16 +126,16 @@
         },
         {
             "name": "proteusthemes/wp-customizer-utilities",
-            "version": "v2.3.0",
+            "version": "v2.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/proteusthemes/wp-customizer-utilities.git",
-                "reference": "5c2935e142ed0d30695eab2a78436974f391f4a1"
+                "reference": "8daed5e24b1de232535205a8fb6c18d1ad538273"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/proteusthemes/wp-customizer-utilities/zipball/5c2935e142ed0d30695eab2a78436974f391f4a1",
-                "reference": "5c2935e142ed0d30695eab2a78436974f391f4a1",
+                "url": "https://api.github.com/repos/proteusthemes/wp-customizer-utilities/zipball/8daed5e24b1de232535205a8fb6c18d1ad538273",
+                "reference": "8daed5e24b1de232535205a8fb6c18d1ad538273",
                 "shasum": ""
             },
             "require": {
@@ -135,7 +170,7 @@
                 "wordpress",
                 "wp"
             ],
-            "time": "2016-07-08 10:11:23"
+            "time": "2017-01-20 09:57:16"
         }
     ],
     "packages-dev": [],
