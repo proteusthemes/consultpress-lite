@@ -4,21 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "1c85ac26e54b095321413ccc442d050b",
-    "content-hash": "6f3d082814c611061969e5bd64bb9875",
+    "content-hash": "e6dbecd7fe578a7c97dc07708ea8033c",
     "packages": [
         {
             "name": "freemius/wordpress-sdk",
-            "version": "dev-feature/fs-theme-mode-v2",
+            "version": "dev-feature/fs-theme-mode-v4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Freemius/wordpress-sdk.git",
-                "reference": "654d542a55563706282b698b27ea5e0fad32a3ef"
+                "reference": "fcaa4d043bdbd4c4623000730d81502a2a83e38d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Freemius/wordpress-sdk/zipball/654d542a55563706282b698b27ea5e0fad32a3ef",
-                "reference": "654d542a55563706282b698b27ea5e0fad32a3ef",
+                "url": "https://api.github.com/repos/Freemius/wordpress-sdk/zipball/fcaa4d043bdbd4c4623000730d81502a2a83e38d",
+                "reference": "fcaa4d043bdbd4c4623000730d81502a2a83e38d",
                 "shasum": ""
             },
             "require": {
@@ -37,7 +36,7 @@
                 "sdk",
                 "wordpress"
             ],
-            "time": "2017-02-22 12:06:45"
+            "time": "2017-03-13 20:12:48"
         },
         {
             "name": "mexitek/phpcolors",
@@ -82,7 +81,7 @@
                 "frontend",
                 "ui"
             ],
-            "time": "2015-09-09 15:43:06"
+            "time": "2015-09-09T15:43:06+00:00"
         },
         {
             "name": "proteusthemes/wai-aria-walker-nav-menu",
@@ -119,7 +118,7 @@
                 }
             ],
             "description": "WordPress menu walker which adds appropriate WIA-ARIA roles to dropdown menus.",
-            "time": "2016-05-18 18:48:49"
+            "time": "2016-05-18T18:48:49+00:00"
         },
         {
             "name": "proteusthemes/wp-customizer-utilities",
@@ -167,7 +166,7 @@
                 "wordpress",
                 "wp"
             ],
-            "time": "2017-01-20 09:57:16"
+            "time": "2017-01-20T09:57:16+00:00"
         }
     ],
     "packages-dev": [],

@@ -6,6 +6,6 @@
     "require": {
         "proteusthemes/wai-aria-walker-nav-menu": "^1.2.0",
         "proteusthemes/wp-customizer-utilities":  "^2.3.0",
-        "freemius/wordpress-sdk": "dev-feature/fs-theme-mode-v2"
+        "freemius/wordpress-sdk": "dev-feature/fs-theme-mode-v4"
     }
 }
