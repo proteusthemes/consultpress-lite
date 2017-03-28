@@ -256,4 +256,49 @@ module.exports = function ( grunt ) {
 		'scsslint',
 		'jshint',
 	] );
+
+	// CI
+	// build assets
+	grunt.registerTask( 'ci', 'Builds all assets on the CI, needs to be called with --theme_version arg.', function () {
+		// get theme version, provided from cli
+		var version = grunt.option( 'theme_version' ) || null;
+
+		// check if version is string and is in semver.org format (at least a start)
+		if ( 'string' === typeof version && /^v\d{1,2}\.\d{1,2}\.\d{1,2}/.test( version ) ) { // regex that version starts like v1.2.3
+			var longVersion = version.substring( 1 ).trim(),
+				tasksToRun = [
+					'build',
+					'replace:theme_version',
+					'check_theme_replace',
+					'addtextdomain'
+				];
+
+			grunt.option( 'longVersion', longVersion );
+
+			if ( /^\d{1,2}\.\d{1,2}\.\d{1,2}(-RC\d)?$/.test( longVersion ) ) { // perform theme update, add flag file
+				grunt.log.writeln( 'Uploading a new theme version to our page' );
+				grunt.log.writeln( '===========================' );
+
+				if ( grunt.file.isFile( './deploy-new-theme' ) ) {
+					grunt.fail.warn( 'File for flagging theme build already exists.', 1 );
+				}
+				else {
+					// write a dummy file, if this one exists later on build a theme zip will be deployed to our page.
+					grunt.file.write( './deploy-new-theme', 'lets go!' );
+				}
+			}
+
+			grunt.task.run( tasksToRun );
+		}
+		else {
+			grunt.fail.warn( 'Version to be replaced in style.css is not specified or valid.\nUse: grunt <your-task> --theme_version=v1.2.3\n', 3 );
+		}
+	} );
+
+	// check if the search-replace was performed
+	grunt.registerTask( 'check_theme_replace', 'Check if the search-replace for theme version was performed.', function () {
+		if ( true !== grunt.option( 'version_replaced_flag' ) ) {
+			grunt.fail.warn( 'Search-replace task error - no theme version replaced.' );
+		}
+	} );
 };
