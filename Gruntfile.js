@@ -117,6 +117,7 @@ module.exports = function ( grunt ) {
 					'assets/**',
 					'template-parts/**',
 					'bower_components/font-awesome/fonts/**',
+					'bower_components/bootstrap/js/dist/*.js',
 					'inc/**',
 					'vendor/**'
 				],
