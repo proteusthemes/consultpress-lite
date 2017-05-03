@@ -15,7 +15,7 @@ function testRequiredFiles {
 		template-parts/content.php
 		screenshot.png
 		readme.txt
-		assets/js/modernizr.custom.20160801.js
+		assets/js/modernizr.custom.20160801.min.js
 		assets/js/main.min.js
 		bower_components/font-awesome/fonts/fontawesome-webfont.woff2
 		vendor/proteusthemes/wai-aria-walker-nav-menu/wai-aria.js

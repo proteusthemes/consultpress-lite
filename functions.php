@@ -172,7 +172,7 @@ if ( ! function_exists( 'consultpresslite_enqueue_google_web_fonts' ) ) {
 if ( ! function_exists( 'consultpresslite_enqueue_scripts' ) ) {
 	function consultpresslite_enqueue_scripts() {
 		// Modernizr for the frontend feature detection.
-		wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/assets/js/modernizr.custom.20160801.js', array(), null );
+		wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/assets/js/modernizr.custom.20160801.min.js', array(), null );
 
 		// Array for main.js dependencies.
 		$main_deps = array( 'jquery', 'underscore' );
