@@ -16,5 +16,9 @@ Font Awesome, Copyright 2012 Dave Gandy.
 Font Awesome are licensed under the terms of the SIL OFL 1.1.
 Source: http://fontawesome.io/license/
 
+phpColors, Copyright © 2017 Arlo Carreon.
+phpColors are licensed under the terms of the MIT.
+Source: http://arlocarreon.com
+
 Pattern and images from screenshot, Copyright ProteusThemes 2016.
 All images are licensed under the terms of the CC0 Public Domain.
