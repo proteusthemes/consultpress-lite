@@ -62,7 +62,7 @@ class ConsultPressLite_Customize_Frontent {
 		$cached_css = get_theme_mod( 'cached_css', '' );
 
 		$out .= '/* WP Customizer start */' . PHP_EOL;
-		$out .= apply_filters( 'consultpresslite_cached_css', $cached_css );
+		$out .= strip_tags( apply_filters( 'consultpresslite_cached_css', $cached_css ) );
 		$out .= PHP_EOL . '/* WP Customizer end */';
 
 		return $out;
