@@ -54,6 +54,10 @@ class ConsultPressLiteFilters {
 	 * @return array
 	 */
 	function excerpt_more( $more ) {
+		if ( is_admin() ) {
+			return $more;
+		}
+
 		return ' &hellip;';
 	}
 
