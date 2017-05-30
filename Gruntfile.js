@@ -184,6 +184,14 @@ module.exports = function ( grunt ) {
 					from: "else {\n				$this->page_hook = call_user_func( 'add_submenu_page', $args['parent_slug'], $args['page_title'], $args['menu_title'], $args['capability'], $args['menu_slug'], $args['function'] );\n			}",
 					to: ''
 				}]
+			},
+			removeCharsetFromCSS: {
+				src: 'style.{,min.}css',
+				overwrite: true,
+				replacements: [{
+					from: '@charset "UTF-8";\n',
+					to: '',
+				}],
 			}
 		},
 
@@ -242,6 +250,7 @@ module.exports = function ( grunt ) {
 	grunt.registerTask( 'build', [
 		'sass:build',
 		'postcss:autoprefix',
+		'replace:removeCharsetFromCSS',
 		'requirejs:build',
 	] );
 
@@ -270,6 +279,7 @@ module.exports = function ( grunt ) {
 				tasksToRun = [
 					'build',
 					'replace:theme_version',
+					'replace:removeCharsetFromCSS',
 					'check_theme_replace',
 					'addtextdomain'
 				];
