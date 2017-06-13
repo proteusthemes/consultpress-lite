@@ -74,9 +74,9 @@ if ( ! function_exists( 'consultpresslite_theme_setup' ) ) {
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
 		 * If you're building a theme based on ConsultPressLite, use a find and replace
-		 * to change 'consultpresslite-pt' to the name of your theme in all the template files
+		 * to change 'consultpress-lite' to the name of your theme in all the template files
 		 */
-		load_theme_textdomain( 'consultpresslite-pt', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'consultpress-lite', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
