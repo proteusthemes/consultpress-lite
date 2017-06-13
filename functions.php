@@ -144,13 +144,7 @@ if ( ! isset( $content_width ) ) {
  */
 if ( ! function_exists( 'consultpresslite_enqueue_styles' ) ) {
 	function consultpresslite_enqueue_styles() {
-		$stylesheet_uri = get_stylesheet_uri();
-
-		if ( 'yes' === get_theme_mod( 'use_minified_css', 'no' ) ) {
-			$stylesheet_uri = get_stylesheet_directory_uri() . '/style.min.css';
-		}
-
-		wp_enqueue_style( 'consultpresslite-main', $stylesheet_uri, array(), CONSULTPRESSLITE_WP_VERSION );
+		wp_enqueue_style( 'consultpresslite-main', get_stylesheet_uri(), array(), CONSULTPRESSLITE_WP_VERSION );
 	}
 	add_action( 'wp_enqueue_scripts', 'consultpresslite_enqueue_styles' );
 }
